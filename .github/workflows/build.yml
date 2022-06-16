@@ -44,3 +44,9 @@ jobs:
           name: test-results
           path: target/surefire-reports/
           retention-days: 7
+      - name: Repository Dispatch
+        uses: peter-evans/repository-dispatch@v2.0.0
+        with:
+          token: ${{ secrets.github-pat-token }}
+          repository: ymeadows/zeebe-kafka-exporter
+          event-type: exporter-update
