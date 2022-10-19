@@ -45,7 +45,7 @@ jobs:
           path: target/surefire-reports/
           retention-days: 7
       - name: Repository Dispatch
-        uses: peter-evans/repository-dispatch@v2.0.0
+        uses: peter-evans/repository-dispatch@v2.1.0
         with:
           token: ${{ secrets.GH_ACTION_PAT_PACKAGES_ACCESS }}
           repository: ymeadows/zeebe-kafka-exporter
